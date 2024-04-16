@@ -2,21 +2,20 @@
 Author: Zihao Wang wzh7076@gmail.com
 Date: 2024-04-15 20:16:10
 LastEditors: Zihao Wang wzh7076@gmail.com
-LastEditTime: 2024-04-16 16:19:32
+LastEditTime: 2024-04-16 16:36:54
 FilePath: \Vehicle_Drl\env\pathFollowingEnv.py
 Description: 
 
 '''
-
-
 from env import Vehicle_env
 import numpy as np
 from gym import spaces
-from lib.path import Path, PolylinePath, SplinePath
+from lib.path import Path, PolylinePath, SplinePath, SineWavePath3D
 
 type2Path = {
     'polyline': PolylinePath,
     'spline': SplinePath,
+    'sine_wave': SineWavePath3D
 }
 
 class PathFollowingEnv(Vehicle_env):
