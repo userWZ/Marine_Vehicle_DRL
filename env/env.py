@@ -1,12 +1,13 @@
 '''
-Author: 王子豪 as456741@qq.com
+Author: Zihao Wang wzh7076@gmail.com
 Date: 2024-04-15 19:03:44
-LastEditors: 王子豪 as456741@qq.com
-LastEditTime: 2024-04-16 16:02:46
+LastEditors: Zihao Wang wzh7076@gmail.com
+LastEditTime: 2024-04-16 16:18:31
 FilePath: \Vehicle_Drl\env\env.py
 Description: 
 
 '''
+
 import gym
 from abc import ABC
 from vehicles import *

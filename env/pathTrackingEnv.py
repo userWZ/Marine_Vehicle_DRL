@@ -1,9 +1,10 @@
 '''
-Author: 王子豪 as456741@qq.com
+Author: Zihao Wang wzh7076@gmail.com
 Date: 2024-04-15 19:51:11
-LastEditors: 王子豪 as456741@qq.com
-LastEditTime: 2024-04-15 20:21:00
+LastEditors: Zihao Wang wzh7076@gmail.com
+LastEditTime: 2024-04-16 16:19:37
 FilePath: \Vehicle_Drl\env\pathTrackingEnv.py
 Description: 
 
 '''
+
