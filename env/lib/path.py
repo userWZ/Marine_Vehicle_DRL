@@ -1,9 +1,9 @@
 '''
 Author: 王子豪 as456741@qq.com
 Date: 2024-04-16 13:41:07
-LastEditors: 王子豪 as456741@qq.com
-LastEditTime: 2024-04-16 16:01:59
-FilePath: \Vehicle_Drl\env\lib\path.py
+LastEditors: Zihao Wang wzh7076@gmail.com
+LastEditTime: 2024-04-16 17:05:15
+FilePath: \Marine-Vehicle-Simulation-Environments-For-Deep-Reinforcement-Learning\env\lib\path.py
 Description: 
 
 '''

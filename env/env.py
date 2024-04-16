@@ -2,8 +2,8 @@
 Author: Zihao Wang wzh7076@gmail.com
 Date: 2024-04-15 19:03:44
 LastEditors: Zihao Wang wzh7076@gmail.com
-LastEditTime: 2024-04-16 16:18:31
-FilePath: \Vehicle_Drl\env\env.py
+LastEditTime: 2024-04-16 18:10:41
+FilePath: \Marine-Vehicle-Simulation-Environments-For-Deep-Reinforcement-Learning\env\env.py
 Description: 
 
 '''
@@ -21,6 +21,7 @@ class Vehicle_env(gym.Env, ABC):
         self.sampleFreq = 1/self.sampleTime
         self.maxStep = 1000
         self.DOF = 6
+        self.step_count = 0
         
         # vehicle state space
         self.eta = None  # position/attitude, user editable
@@ -37,17 +38,11 @@ class Vehicle_env(gym.Env, ABC):
         # history info
         self.rewards_array = []
         self.total_steps = 0
-        
         # vehicle class
         self.vehicle = self.select_vehicle(vehicle_name)
-        self.reset()
         
     def reset(self):
-        self.dimU = self.vehicle.dimU
-        self.eta = np.zeros(self.DOF,float)
-        self.nu =  self.vehicle.nu # velocity vector
-        self.u_actual = self.vehicle.u_actual 
-        return self.state
+        raise NotImplementedError
     
     def step(self, action):
         raise NotImplementedError
