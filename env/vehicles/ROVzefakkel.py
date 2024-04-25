@@ -90,6 +90,9 @@ class ROVzefakkel:
 
         self.controls = ['Rudder angle (deg)']
         self.dimU = len(self.controls)
+        self.controls_range = {
+            'Rudder angle (deg)': [-self.deltaMax, self.deltaMax]
+        }
         
         # ROV Zefakkel (Van Amerongen 1982) 
         self.n1 = 1

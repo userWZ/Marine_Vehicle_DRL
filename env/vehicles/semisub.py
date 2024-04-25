@@ -114,6 +114,15 @@ class semisub:
             "#5 Right poontoon main propeller (RPM)",
             "$6 Left pontoon main propeller (RPM)",
         ]
+        
+        self.controls_range = {
+            "#1 Bow tunnel thruster (RPM)": [-160, 160],
+            "#2 Bow tunnel thruster (RPM)": [-160, 160],
+            "#3 Aft tunnel thruster (RPM)": [-160, 160],
+            "#4 Aft tunnel thruster (RPM)": [-160, 160],
+            "#5 Right poontoon main propeller (RPM)": [-250, 250],
+            "$6 Left pontoon main propeller (RPM)": [-250, 250],
+        }
         self.dimU = len(self.controls)
         
         # Semisub model

@@ -2,7 +2,7 @@
 Author: Zihao Wang wzh7076@gmail.com
 Date: 2024-04-15 19:03:44
 LastEditors: Zihao Wang wzh7076@gmail.com
-LastEditTime: 2024-04-16 18:10:41
+LastEditTime: 2024-04-19 16:13:07
 FilePath: \Marine-Vehicle-Simulation-Environments-For-Deep-Reinforcement-Learning\env\env.py
 Description: 
 
@@ -30,16 +30,24 @@ class Vehicle_env(gym.Env, ABC):
         self.state = None
         self.dimU = None
         
-        # aciton space is the same as the u_actual
-        
-        # controls/actions array
-        self.controls_array = []
         
         # history info
         self.rewards_array = []
         self.total_steps = 0
+        
         # vehicle class
         self.vehicle = self.select_vehicle(vehicle_name)
+        # aciton space is the same as the u_actual
+        self.controls = self.vehicle.controls
+        self.controls_range = self.vehicle.controls_range
+        #  action space
+        self.min_action = np.array([self.controls_range[control][0] for control in self.controls])
+        self.max_action = np.array([self.controls_range[control][1] for control in self.controls])
+        
+        self.action_space = gym.spaces.Box(
+            low=self.min_action, high=self.max_action, shape=(2,), dtype=np.float32
+        )
+        
         
     def reset(self):
         raise NotImplementedError

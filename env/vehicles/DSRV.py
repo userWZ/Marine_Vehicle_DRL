@@ -70,7 +70,9 @@ class DSRV:
         self.W0 = 0
         self.nu = np.array([self.U0, 0, self.W0, 0, 0, 0], float)  # velocity vector
         self.u_actual = np.array([0], float)  # control input vector
-
+        self.controls_range = {
+            'Stern plane (deg)': [-self.deltaMax, self.deltaMax]
+        }
         self.controls = ["Stern plane (deg)"]
         self.dimU = len(self.controls)
 

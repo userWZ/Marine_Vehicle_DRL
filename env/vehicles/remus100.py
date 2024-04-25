@@ -119,6 +119,11 @@ class remus100:
             "Propeller revolution (rpm)"
             ]
         self.dimU = len(self.controls) 
+        self.controls_range = {
+            'Tail rudder (deg)': [-15, 15],
+            'stern plane (deg)': [-15, 15],
+            'Propeller revolution (rpm)': [0, 1525]
+        }
         
 
         # Actuator dynamics

@@ -100,6 +100,10 @@ class otter:
             "Right propeller shaft speed (rad/s)"
         ]
         self.dimU = len(self.controls)
+        self.controls_range = {
+            'Left propeller shaft speed (rad/s)': [-10, 10],
+            'Right propeller shaft speed (rad/s)': [-10, 10]
+        }
 
         # Vehicle parameters
         m = 55.0                                 # mass (kg)

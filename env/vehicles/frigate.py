@@ -89,6 +89,10 @@ class frigate:
         self.u_actual = np.array([0],float)             # control input vector              
 
         self.controls = ['Rudder angle (deg)']
+        
+        self.u_range = {
+            'Rudder angle (deg)': [-self.deltaMax, self.deltaMax]
+        }
         self.dimU = len(self.controls)
         
         # ROV Zefakkel (Van Amerongen 1982) 

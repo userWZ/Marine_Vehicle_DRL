@@ -2,7 +2,7 @@
 Author: Zihao Wang wzh7076@gmail.com
 Date: 2024-04-15 20:16:10
 LastEditors: Zihao Wang wzh7076@gmail.com
-LastEditTime: 2024-04-16 18:26:16
+LastEditTime: 2024-04-19 17:01:52
 FilePath: \Marine-Vehicle-Simulation-Environments-For-Deep-Reinforcement-Learning\env\pathFollowingEnv.py
 Description: 
 
@@ -30,6 +30,9 @@ class PathFollowingEnv(Vehicle_env):
         self.high_state = np.array([np.inf, np.inf, np.inf, np.pi, np.pi, np.pi], dtype=np.float32)
         self.observation_space = spaces.Box(low=self.low_state, high=self.high_state, dtype=np.float32)
         
+        # 动作维度
+        self.action_dim = self.vehicle.dimU
+        
         # aciton space is the same as the u_actual
         # self.action_space = spaces.Box(
         #     low=self.min_action, high=self.max_action, shape=(1,), dtype=np.float32
@@ -41,7 +44,6 @@ class PathFollowingEnv(Vehicle_env):
     
     def reset(self, path_args=None):
         # init the state of the vehicle
-        
         self.dimU = self.vehicle.dimU
         self.eta = np.zeros(self.DOF,float)
         self.nu =  self.vehicle.nu # velocity vector

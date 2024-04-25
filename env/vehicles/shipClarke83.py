@@ -115,6 +115,10 @@ class shipClarke83:
 
         self.controls = ["Rudder angle (deg)"]
         self.dimU = len(self.controls)
+        
+        self.controls_range = {
+            'Rudder angle (deg)': [-self.deltaMax, self.deltaMax]
+        }
 
         # Heading autopilot
         self.e_int = 0  # integral state

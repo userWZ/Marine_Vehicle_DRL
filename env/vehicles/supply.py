@@ -122,6 +122,14 @@ class supply:
         ]
         self.dimU = len(self.controls)
 
+        self.controls_range = {
+            '#1 Bow tunnel thruster (RPM)': [-250, 250],
+            '#2 Bow tunnel thruster (RPM)': [-250, 250],
+            '#3 Stern tunnel thruster (RPM)': [-250, 250],
+            '#4 Stern tunnel thruster (RPM)': [-250, 250],
+            '#5 Right main propeller (RPM)': [-160, 160],
+            '#6 Left main propeller (RPM)': [-160, 160]
+        }
         # Thrust coefficient and configuration matrices (Fossen 2021, Ch. 11.2)
         # Thrust_max(i) = K(i) * n_max(i)^2
         # Tunnel thruster: 3.2 * 250^2 = 200 kN
